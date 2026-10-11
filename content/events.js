@@ -14,8 +14,8 @@ window.COMMON_STEPS_EVENTS = [
   {
     title: "Tango night at Lou's",
     date: "2026-11-18",
-    start: "",
-    end: "",
+    start: "7:00pm",
+    end: "11:00pm",
     venue: "Lou's",
     area: "Harvard Square, Cambridge",
     note: "",
