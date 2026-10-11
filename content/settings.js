@@ -2,7 +2,7 @@
 
 window.COMMON_STEPS = {
   // Shown in the "Host a night" section.
-  contactEmail: "smgaller@gmail.com",
+  contactEmail: "commonstepsdance@gmail.com",
 
   // Email list signup.
   // `action` is the address signups are sent to. For a Google Form it looks like
