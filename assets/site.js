@@ -201,7 +201,7 @@
       fetch(signup.action, { method: "POST", mode: "no-cors", body: fields })
         .then(function () {
           form.reset();
-          say("You're on the list. We'll email you when the next night is set.");
+          say("Thank you for joining the list! We look forward to seeing you at our future events.");
         })
         .catch(function () {
           say("That didn't go through. Check your connection and try again.");
