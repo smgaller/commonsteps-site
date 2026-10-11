@@ -9,9 +9,11 @@ window.COMMON_STEPS = {
   //   https://docs.google.com/forms/d/e/<form id>/formResponse
   // and each field name looks like "entry.123456789" (one per question on the form).
   // While `action` is empty, the form shows a "not connected" note and saves nothing.
+  // Currently connected to the Google Form "Sam Tango Mailing List"
+  // (questions: Full Name, Email). Signups appear in that form's responses sheet.
   signup: {
-    action: "",
-    emailField: "email",
-    nameField: "name"
+    action: "https://docs.google.com/forms/d/e/1FAIpQLSediOkb1ngnE1uDU1TAC0dCQrRgvujBmcwtQCJsejEVkStPWg/formResponse",
+    emailField: "entry.463957106",
+    nameField: "entry.1860965681"
   }
 };

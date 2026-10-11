@@ -167,6 +167,14 @@
       var value = email.value.trim();
       var looksValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 
+      // The mailing list form requires a name, so check here: a signup without
+      // one would be dropped without the visitor being told.
+      if (name && name.required && !name.value.trim()) {
+        say("Enter your name.");
+        name.focus();
+        return;
+      }
+
       if (!looksValid) {
         say("Enter an email address like name@example.com.");
         email.focus();
