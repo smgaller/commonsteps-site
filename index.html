@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Common Steps</title>
+<meta name="description" content="Common Steps is a nonprofit that produces Argentine tango socials and community dance nights in Cambridge and Somerville, Massachusetts.">
+<meta property="og:title" content="Common Steps">
+<meta property="og:description" content="Dance nights for the spaces we share. Argentine tango socials in Cambridge and Somerville, Massachusetts.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://commonsteps.us/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23142138'/%3E%3Ccircle cx='12' cy='18' r='6' fill='%23F1F3F7'/%3E%3Ccircle cx='21' cy='13' r='6' fill='%23FF8FB3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Faustina:ital,wght@0,400..700;1,400..700&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="site-header wrap">
+  <a class="wordmark" href="#top">Common Steps</a>
+  <nav class="site-nav" aria-label="Sections">
+    <a href="#nights">Nights</a>
+    <a href="#dates">Dates</a>
+    <a href="#team">Team</a>
+    <a href="#contact">Contact</a>
+    <a class="nav-list" href="#list">Join the list</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero wrap">
+    <div class="hero-text">
+      <h1>Dance nights for the spaces we share</h1>
+      <p class="lede">Common Steps is a nonprofit that produces Argentine tango socials in Cambridge and Somerville. We bring the DJ, the beginner lesson, and the dancers. A lobby, a rooftop, or a commons brings the floor.</p>
+      <p class="actions">
+        <a class="button button-primary" href="#list">Join the email list</a>
+        <a class="button button-quiet" href="#contact">Host a night</a>
+      </p>
+    </div>
+
+    <figure class="floorplan">
+      <svg viewBox="0 0 520 420" role="img" aria-labelledby="plan-title plan-desc">
+        <title id="plan-title">Floor plan of a Common Steps night</title>
+        <desc id="plan-desc">A room with couples dancing counterclockwise around the floor, a DJ table with speakers along the top wall, seating along the left wall, and a check-in table beside the entrance.</desc>
+
+        <rect class="plan-floor" x="10" y="10" width="500" height="400" rx="6"/>
+        <path class="plan-wall" d="M100 410 H504 a6 6 0 0 0 6 -6 V16 a6 6 0 0 0 -6 -6 H16 a6 6 0 0 0 -6 6 V404 a6 6 0 0 0 6 6 H40"/>
+
+        <rect class="plan-solid" x="236" y="24" width="22" height="26" rx="2"/>
+        <rect class="plan-solid" x="382" y="24" width="22" height="26" rx="2"/>
+        <rect class="plan-table" x="285" y="26" width="70" height="22" rx="2"/>
+        <text class="plan-label" x="320" y="42" text-anchor="middle">DJ</text>
+        <text class="plan-label" x="247" y="68" text-anchor="middle">Speakers</text>
+
+        <g class="plan-chairs">
+          <circle cx="36" cy="100" r="7"/>
+          <circle cx="36" cy="128" r="7"/>
+          <circle cx="36" cy="156" r="7"/>
+          <circle cx="36" cy="184" r="7"/>
+          <circle cx="36" cy="212" r="7"/>
+          <circle cx="36" cy="240" r="7"/>
+          <circle cx="36" cy="268" r="7"/>
+        </g>
+        <text class="plan-label" x="54" y="189">Seating</text>
+
+        <text class="plan-label" x="70" y="328" text-anchor="middle">Check-in</text>
+        <rect class="plan-table" x="28" y="338" width="84" height="22" rx="2"/>
+        <text class="plan-label plan-label-quiet" x="70" y="399" text-anchor="middle">Entrance</text>
+
+        <path id="ronda" class="plan-ronda" d="M405 115 H235 a60 60 0 0 0 -60 60 V305 a60 60 0 0 0 60 60 H405 a60 60 0 0 0 60 -60 V175 a60 60 0 0 0 -60 -60 Z"/>
+        <text class="plan-label plan-label-strong" x="320" y="236" text-anchor="middle">Line of dance</text>
+        <text class="plan-label plan-label-quiet" x="320" y="256" text-anchor="middle">counterclockwise</text>
+
+        <g id="couples"></g>
+      </svg>
+      <figcaption>How we set up a room: a clear floor for the line of dance, seats for people who would rather watch, and check-in by the door.</figcaption>
+    </figure>
+  </section>
+
+  <section class="band wrap" id="nights">
+    <h2>What a night involves</h2>
+    <div class="band-body">
+      <div class="exchange">
+        <div>
+          <h3>We bring</h3>
+          <ul>
+            <li>Event production and artistic direction</li>
+            <li>A DJ and a beginner-friendly lesson</li>
+            <li>Ticketing, registration, check-in, and an attendance report afterward</li>
+            <li>Promotion through our email list, local calendars, social media, and tango networks</li>
+            <li>Hosts and volunteers on the floor</li>
+            <li>A code of conduct and consent-based dance guidelines</li>
+            <li>Speakers, when the house system isn't a fit</li>
+          </ul>
+        </div>
+        <div>
+          <h3>The venue provides</h3>
+          <ul>
+            <li>A clear floor, with time to set up and reset</li>
+            <li>Help moving furniture before and after</li>
+            <li>A place on your calendar and in your channels</li>
+            <li>Two tables: one for the DJ, one for check-in</li>
+            <li>House sound, if you have it</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="evening-panel">
+        <h3>A sample Friday evening</h3>
+        <ol class="evening">
+          <li><time datetime="17:30">5:30 pm</time><span>Doors open and the DJ starts</span></li>
+          <li><time datetime="18:00">6:00 pm</time><span>Beginner lesson, 30 minutes. No partner or experience needed.</span></li>
+          <li><time datetime="18:30">6:30 pm</time><span>Social dancing</span></li>
+          <li><time datetime="20:30">8:30 pm</time><span>Last song, then we reset the room</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="band wrap" id="dates">
+    <h2>Upcoming dates</h2>
+    <div class="band-body">
+      <div id="event-list" class="events"></div>
+      <noscript><p>Dates load with JavaScript. Join the email list below and we'll send them to you.</p></noscript>
+    </div>
+  </section>
+
+  <section class="band wrap" id="work">
+    <h2>What our organizers have produced</h2>
+    <div class="band-body">
+      <div class="work">
+        <div>
+          <h3>Friday socials at the Kendall Urban Park Roof Garden</h3>
+          <p>More than 25 weekly Friday nights, with recent attendance averaging over 50.</p>
+        </div>
+        <div>
+          <h3>Larger tango events in Cambridge</h3>
+          <p>Nights that have drawn more than 150 people.</p>
+        </div>
+        <div>
+          <h3><cite>Desde El Amor, Tango</cite>, 2025</h3>
+          <p>A sold-out ticketed performance featuring Daniel Binelli and Polly Ferman.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band wrap" id="team">
+    <h2>Team</h2>
+    <div class="band-body">
+      <div class="team">
+        <div>
+          <h3>Samuel Galler</h3>
+          <p>Sam is a Greater Boston tango organizer who produces recurring community events and ticketed performances. He previously served as an officer of the MIT Tango Club and is the Arts &amp; Entertainment Chair for the MIT Club of Boston.</p>
+        </div>
+        <div>
+          <h3>Paloma Rodríguez</h3>
+          <p>Paloma has danced Argentine tango for more than 20 years, starting in Chile in 2005. She moved to Buenos Aires in 2021 and trained with internationally known tango artists. In 2023 she joined <cite>Sensaciones de Tango</cite> at Café Tortoni, working in show operations, guest reception, and ticket sales while helping organize milongas. In 2025 she co-organized the Miami Sunshine Tango Festival.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band wrap" id="floor">
+    <h2>On the floor</h2>
+    <div class="band-body">
+      <ul class="floor-rules">
+        <li>No partner or dance experience needed. Our socials include a beginner lesson.</li>
+        <li>Invitations are respectful and consent-based. Saying no is always fine.</li>
+        <li>A code of conduct covers respect, anti-harassment, and non-discrimination.</li>
+        <li>Accessible seating and clear paths, for dancers and for people watching.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="band wrap" id="list">
+    <h2>Join the email list</h2>
+    <div class="band-body">
+      <p class="band-intro">We send dates, venues, and ticket links for upcoming nights.</p>
+      <form id="signup-form" class="signup" novalidate>
+        <div class="field">
+          <label for="signup-name">First name <span class="optional">(optional)</span></label>
+          <input id="signup-name" name="name" type="text" autocomplete="given-name">
+        </div>
+        <div class="field">
+          <label for="signup-email">Email</label>
+          <input id="signup-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <button class="button button-primary" type="submit">Join the list</button>
+      </form>
+      <p id="signup-status" class="form-status" role="status"></p>
+      <p id="signup-preview-note" class="preview-note" hidden>Preview note: this form isn't connected to a mailing list yet, so signups aren't saved.</p>
+    </div>
+  </section>
+
+  <section class="band wrap" id="contact">
+    <h2>Host a night in your space</h2>
+    <div class="band-body">
+      <p class="band-intro">Tell us about the room and the evenings you'd like to fill, and we'll set up a time to talk.</p>
+      <p class="contact-line">
+        <a id="contact-email" class="contact-email" href="#contact"></a>
+        <button id="copy-email" class="button button-quiet button-small" type="button">Copy address</button>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer wrap">
+  <p>&copy; <span id="year">2026</span> Common Steps. Cambridge and Somerville, Massachusetts.</p>
+</footer>
+
+<script src="content/settings.js"></script>
+<script src="content/events.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
