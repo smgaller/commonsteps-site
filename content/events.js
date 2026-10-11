@@ -3,7 +3,7 @@
 //
 //   title      Name of the night
 //   date       "YYYY-MM-DD"
-//   start/end  24-hour times like "17:30" (leave "" to show "Time to be announced")
+//   start/end  Times like "7:00pm" or "19:00" (leave "" to show "Time to be announced")
 //   venue      Venue name
 //   area       Neighborhood and city
 //   note       Optional one-line description

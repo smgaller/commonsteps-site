@@ -72,13 +72,15 @@
     return isNaN(day.getTime()) ? null : day;
   }
 
+  // Accepts "19:00", "7:00pm", "7:00 PM" or "7pm" and shows "7:00 pm".
   function formatClock(text) {
-    var parts = String(text || "").split(":");
-    if (parts.length < 2) return "";
-    var hour = Number(parts[0]);
-    var minute = parts[1];
-    if (isNaN(hour)) return "";
-    var suffix = hour >= 12 ? "pm" : "am";
+    var match = /^\s*(\d{1,2})(?::(\d{2}))?\s*(am|pm)?\s*$/i.exec(String(text || ""));
+    if (!match) return "";
+    var hour = Number(match[1]);
+    var minute = match[2] || "00";
+    var marker = (match[3] || "").toLowerCase();
+    if (hour > 23 || (marker && (hour < 1 || hour > 12))) return "";
+    var suffix = marker || (hour >= 12 ? "pm" : "am");
     var shown = hour % 12 === 0 ? 12 : hour % 12;
     return shown + ":" + minute + " " + suffix;
   }

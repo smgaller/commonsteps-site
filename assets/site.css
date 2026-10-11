@@ -363,11 +363,15 @@ cite { font-style: italic; }
 /* Footer */
 
 .site-footer {
+  display: grid;
+  gap: 0.75rem;
   border-top: 1px solid var(--line);
   padding-block: 2rem 3rem;
   font-size: var(--step--1);
   color: var(--muted);
 }
+
+.site-footer .sponsor { max-width: 44em; }
 
 /* Narrow screens */
 
