@@ -37,7 +37,9 @@ window.COMMON_STEPS_EVENTS = [
     end: "10:00pm",
     venue: "Margaret Jewett Hall, First Church in Cambridge",
     area: "Harvard Square, Cambridge",
-    note: "A Halloween milonga mixing classic and alternative tango, with dinner provided."
+    note: "A Halloween milonga mixing classic and alternative tango, with dinner provided.",
+    recapLink: "https://www.thebostoncalendar.com/events/halloween-tango-night",
+    recapLabel: "Listing on The Boston Calendar"
   },
   {
     title: "Milonga Al Fresco",
