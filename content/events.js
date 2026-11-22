@@ -58,5 +58,16 @@ window.COMMON_STEPS_EVENTS = [
     note: "A sold-out concert by Daniel Binelli (bandoneon) and Polly Ferman (piano), with dancers Hernán Brizuela and Anita Flejter, presented by the MIT Tango Club and followed by a tango social.",
     recapLink: "https://calendar.mit.edu/event/daniel-binelli-and-polly-ferman-desde-el-amor-tango-2025",
     recapLabel: "Event page on the MIT calendar"
+  },
+  {
+    title: "Milonga Clandestina",
+    date: "2026-11-12",
+    start: "7:00pm",
+    end: "11:00pm",
+    venue: "Nook and Upstairs at Bow, 1 Bow Market Way",
+    area: "Bow Market, Somerville",
+    note: "An evening of tango: classic tango music in the Nook and Upstairs, dancing upstairs, and tango-themed drinks. 21+.",
+    recapLink: "https://www.upstairsatbow.com/public-events/milonga-clandestina-an-evening-of-tango",
+    recapLabel: "Event page at Upstairs at Bow"
   }
 ];
