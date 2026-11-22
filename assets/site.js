@@ -95,52 +95,84 @@
     return start + " to " + end;
   }
 
-  function renderEvents() {
-    var list = document.getElementById("event-list");
-    if (!list) return;
+  // An event's last day: `until` for a series, otherwise its date.
+  function lastDay(event) {
+    return parseDay(event.until) || parseDay(event.date);
+  }
 
+  function eventRow(event, today, isPast) {
+    var day = parseDay(event.date);
+    var end = parseDay(event.until);
+    var row = el("article", "event");
+
+    var date = el("p", "event-date");
+    var small, big;
+    if (end) {
+      // A series (such as a summer season) shows its months: "Jun–Sep".
+      var from = day.toLocaleDateString("en-US", { month: "short" });
+      var to = end.toLocaleDateString("en-US", { month: "short" });
+      big = from === to ? from : from + "–" + to;
+      small = String(end.getFullYear());
+    } else {
+      big = day.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+      if (isPast) {
+        small = String(day.getFullYear());
+      } else {
+        small = day.toLocaleDateString("en-US", { weekday: "long" });
+        if (day.getFullYear() !== today.getFullYear()) small += ", " + day.getFullYear();
+      }
+    }
+    date.appendChild(el("span", "event-weekday", small));
+    date.appendChild(el("span", "event-day", big));
+    row.appendChild(date);
+
+    var body = el("div", "event-body");
+    body.appendChild(el("h3", "", event.title));
+    var place = [event.venue, event.area].filter(Boolean).join(", ");
+    if (place) body.appendChild(el("p", "event-meta", place));
+    var times = event.when || formatTimes(event);
+    if (!(isPast && times === "Time to be announced")) body.appendChild(el("p", "event-meta", times));
+    if (event.note) body.appendChild(el("p", "", event.note));
+
+    // Upcoming events link to tickets; past events link to photos or a recap.
+    var href = isPast ? event.recapLink : event.link;
+    if (href) {
+      var linkLine = el("p", "event-link");
+      var link = el("a", "", isPast ? (event.recapLabel || "Photos and recap") : (event.linkLabel || "Tickets and details"));
+      link.href = href;
+      linkLine.appendChild(link);
+      body.appendChild(linkLine);
+    }
+    row.appendChild(body);
+    return row;
+  }
+
+  function renderEvents() {
     var today = new Date();
     today.setHours(0, 0, 0, 0);
 
-    var upcoming = events
-      .map(function (event) { return { event: event, day: parseDay(event.date) }; })
-      .filter(function (item) { return item.day && item.day >= today; })
-      .sort(function (a, b) { return a.day - b.day; });
+    var dated = events.filter(function (event) { return parseDay(event.date); });
+    var upcoming = dated
+      .filter(function (event) { return lastDay(event) >= today; })
+      .sort(function (a, b) { return parseDay(a.date) - parseDay(b.date); });
+    var past = dated
+      .filter(function (event) { return lastDay(event) < today; })
+      .sort(function (a, b) { return lastDay(b) - lastDay(a); });
 
-    if (!upcoming.length) {
-      list.appendChild(el("p", "events-empty", "No public dates are scheduled right now. Join the email list and we'll send the next one as soon as it's set."));
-      return;
+    var list = document.getElementById("event-list");
+    if (list) {
+      if (!upcoming.length) {
+        list.appendChild(el("p", "events-empty", "No public dates are scheduled right now. Join the email list and we'll send the next one as soon as it's set."));
+      }
+      upcoming.forEach(function (event) { list.appendChild(eventRow(event, today, false)); });
     }
 
-    upcoming.forEach(function (item) {
-      var event = item.event;
-      var day = item.day;
-      var row = el("article", "event");
-
-      var date = el("p", "event-date");
-      var weekday = day.toLocaleDateString("en-US", { weekday: "long" });
-      var monthDay = day.toLocaleDateString("en-US", { month: "short", day: "numeric" });
-      if (day.getFullYear() !== today.getFullYear()) weekday += ", " + day.getFullYear();
-      date.appendChild(el("span", "event-weekday", weekday));
-      date.appendChild(el("span", "event-day", monthDay));
-      row.appendChild(date);
-
-      var body = el("div", "event-body");
-      body.appendChild(el("h3", "", event.title));
-      var place = [event.venue, event.area].filter(Boolean).join(", ");
-      if (place) body.appendChild(el("p", "event-meta", place));
-      body.appendChild(el("p", "event-meta", formatTimes(event)));
-      if (event.note) body.appendChild(el("p", "", event.note));
-      if (event.link) {
-        var linkLine = el("p", "event-link");
-        var link = el("a", "", event.linkLabel || "Tickets and details");
-        link.href = event.link;
-        linkLine.appendChild(link);
-        body.appendChild(linkLine);
-      }
-      row.appendChild(body);
-      list.appendChild(row);
-    });
+    var pastList = document.getElementById("past-list");
+    var pastSection = document.getElementById("past");
+    if (pastList) {
+      past.forEach(function (event) { pastList.appendChild(eventRow(event, today, true)); });
+      if (!past.length && pastSection) pastSection.hidden = true;
+    }
   }
 
   /* ---------- Email list ---------- */

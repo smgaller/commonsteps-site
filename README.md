@@ -7,7 +7,7 @@ The site for [commonsteps.us](https://commonsteps.us). Plain HTML, CSS, and Java
 | File | What it holds |
 | --- | --- |
 | `index.html` | The page: every section's wording lives here |
-| `content/events.js` | Upcoming dates |
+| `content/events.js` | Upcoming and past events |
 | `content/settings.js` | Contact email and the email-list connection |
 | `assets/site.css` | Colors, type, and layout |
 | `assets/site.js` | Renders the dates, the floor plan, the signup form, and the contact line |
@@ -15,7 +15,7 @@ The site for [commonsteps.us](https://commonsteps.us). Plain HTML, CSS, and Java
 
 ## Common changes
 
-**Add an event.** Copy a block in `content/events.js`, change the values, and save. Events sort by date and disappear on their own the day after they happen. When no events are listed, the section invites people to join the email list.
+**Add an event.** Copy a block in `content/events.js`, change the values, and save. Upcoming events sort by date. The day after an event, it moves to the Past events section on its own, newest first. A series such as a summer season uses `date` and `until` and shows its months. When no events are upcoming, that section invites people to join the email list.
 
 **Change the contact address.** Edit `contactEmail` in `content/settings.js`.
 
