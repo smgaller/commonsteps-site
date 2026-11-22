@@ -170,8 +170,32 @@
     var pastList = document.getElementById("past-list");
     var pastSection = document.getElementById("past");
     if (pastList) {
-      past.forEach(function (event) { pastList.appendChild(eventRow(event, today, true)); });
+      // Show the most recent few; the rest open with the "Show more" button.
+      var PAST_SHOWN = 2;
+      var extra = [];
+      past.forEach(function (event, index) {
+        var row = eventRow(event, today, true);
+        if (index >= PAST_SHOWN) {
+          row.hidden = true;
+          extra.push(row);
+        }
+        pastList.appendChild(row);
+      });
       if (!past.length && pastSection) pastSection.hidden = true;
+
+      var moreButton = document.getElementById("past-more");
+      if (moreButton && extra.length) {
+        var moreLabel = "Show " + extra.length + " more";
+        moreButton.textContent = moreLabel;
+        moreButton.parentNode.hidden = false;
+        moreButton.addEventListener("click", function () {
+          var opening = moreButton.getAttribute("aria-expanded") !== "true";
+          extra.forEach(function (row) { row.hidden = !opening; });
+          moreButton.setAttribute("aria-expanded", String(opening));
+          moreButton.textContent = opening ? "Show less" : moreLabel;
+          if (!opening) pastSection.scrollIntoView({ block: "start" });
+        });
+      }
     }
   }
 
