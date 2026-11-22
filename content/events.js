@@ -47,5 +47,16 @@ window.COMMON_STEPS_EVENTS = [
     venue: "Kendall Urban Park Roof Garden",
     area: "Kendall Square, Cambridge",
     note: "Free outdoor tango with a free beginner lesson. Our second summer season."
+  },
+  {
+    title: "Desde El Amor, Tango",
+    date: "2025-11-12",
+    start: "7:00pm",
+    end: "9:00pm",
+    venue: "Kresge Little Theater, MIT",
+    area: "Cambridge",
+    note: "A sold-out concert by Daniel Binelli (bandoneon) and Polly Ferman (piano), with dancers Hernán Brizuela and Anita Flejter, presented by the MIT Tango Club and followed by a tango social.",
+    recapLink: "https://calendar.mit.edu/event/daniel-binelli-and-polly-ferman-desde-el-amor-tango-2025",
+    recapLabel: "Event page on the MIT calendar"
   }
 ];
