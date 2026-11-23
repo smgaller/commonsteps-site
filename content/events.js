@@ -18,7 +18,7 @@
 
 window.COMMON_STEPS_EVENTS = [
   {
-    title: "Tango Dance Night at Lou's",
+    title: "Tango Night at Lou's",
     date: "2026-12-16",
     start: "7:00pm",
     end: "11:00pm",
@@ -31,7 +31,7 @@ window.COMMON_STEPS_EVENTS = [
     recapLabel: "Event page at Lou's"
   },
   {
-    title: "Tango Dance Night at Lou's",
+    title: "Tango Night at Lou's",
     date: "2026-11-18",
     start: "7:00pm",
     end: "11:00pm",
