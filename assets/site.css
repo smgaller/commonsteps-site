@@ -376,6 +376,13 @@ cite { font-style: italic; }
 
 .site-footer .sponsor { max-width: 44em; }
 
+.social {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+}
+
 .social-link {
   display: inline-flex;
   align-items: center;
@@ -394,6 +401,7 @@ cite { font-style: italic; }
   stroke: currentColor;
   stroke-width: 1.7;
   stroke-linejoin: round;
+  stroke-linecap: round;
 }
 
 /* Narrow screens */
