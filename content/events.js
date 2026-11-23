@@ -1,4 +1,4 @@
-// Events. Add one block per event. Upcoming events appear under "Upcoming dates",
+// Events. Add one block per event. Upcoming events appear under "Upcoming events",
 // sorted by date. The day after an event, it moves to "Past events" on its own,
 // newest first, so there's no need to delete anything.
 //
@@ -17,6 +17,19 @@
 //   recapLabel  Optional text for that link (defaults to "Photos and recap")
 
 window.COMMON_STEPS_EVENTS = [
+  {
+    title: "Tango Dance Night at Lou's",
+    date: "2026-12-16",
+    start: "7:00pm",
+    end: "11:00pm",
+    venue: "Lou's, 13 Brattle St",
+    area: "Harvard Square, Cambridge",
+    note: "A beginner tango lesson, then social dancing. No partner needed.",
+    link: "https://www.wearelous.com/lous-live/tango-night",
+    linkLabel: "Event page at Lou's",
+    recapLink: "https://www.wearelous.com/lous-live/tango-night",
+    recapLabel: "Event page at Lou's"
+  },
   {
     title: "Tango Dance Night at Lou's",
     date: "2026-11-18",

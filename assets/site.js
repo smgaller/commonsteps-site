@@ -63,7 +63,7 @@
     window.requestAnimationFrame(tick);
   }
 
-  /* ---------- Upcoming dates ---------- */
+  /* ---------- Upcoming events ---------- */
 
   function parseDay(text) {
     var parts = String(text || "").split("-");
