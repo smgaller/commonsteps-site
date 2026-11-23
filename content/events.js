@@ -58,10 +58,14 @@ window.COMMON_STEPS_EVENTS = [
     title: "Milonga Al Fresco",
     date: "2026-06-01",
     until: "2026-09-30",
+    start: "5:30pm",
+    end: "8:30pm",
     when: "Every Friday evening, all summer",
     venue: "Kendall Urban Park Roof Garden",
     area: "Kendall Square, Cambridge",
-    note: "Free outdoor tango with a free beginner lesson. Our second summer season."
+    note: "Free outdoor tango with a free beginner lesson. Our second summer season.",
+    recapLink: "https://calendar.mit.edu/event/free-outdoor-tango-kendall-urban-park-roof-garden",
+    recapLabel: "Event page on the MIT calendar"
   },
   {
     title: "Desde El Amor, Tango",
