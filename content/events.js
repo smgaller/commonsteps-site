@@ -44,7 +44,7 @@ window.COMMON_STEPS_EVENTS = [
     recapLabel: "Event page at Lou's"
   },
   {
-    title: "Halloween Pulso",
+    title: "Halloween Pulso Milonga",
     date: "2026-10-31",
     start: "6:00pm",
     end: "10:00pm",
