@@ -17,6 +17,19 @@
 //   recapLabel  Optional text for that link (defaults to "Photos and recap")
 
 window.COMMON_STEPS_EVENTS = [
+    {
+    title: "Free Argentine Tango Class @ Harvard KiOSK",
+    date: "2026-12-19",
+    start: "1:00pm",
+    end: "3:00pm",
+    venue: "Cambridge KiOSK, 0 Harvard Square",
+    area: "Harvard Square, Cambridge",
+    note: "Free beginner tango lesson open to all as part of the Cambridge KiOSK Winter Residency.",
+    link: "https://cambridgekiosk.org/happenings/",
+    linkLabel: "Cambridge KiOSK events page",
+    recapLink: "https://cambridgekiosk.org/happenings/",
+    recapLabel: "Cambridge KiOSK events page"
+  },
   {
     title: "Tango Night at Lou's",
     date: "2026-12-16",
